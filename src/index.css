@@ -1,0 +1,50 @@
+@import 'tailwindcss';
+
+@source "./**/*.php";
+@source "./src/**/*.js";
+
+@theme {
+	--color-main-color: #663399;
+	--color-secondary-color: #00bcff;
+	--color-third-color: #e6f7ff;
+	--color-pure-white-color: #fff;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+@layer components {
+	/* Directly targeting WordPress menu items */
+	.main-nav a,
+	.menu-item a,
+	.menu a {
+		@apply block px-5 py-2.5 text-gray-700 hover:text-secondary-color hover:bg-gray-100 
+               font-medium transition-all duration-200 rounded-xl;
+	}
+
+	/* Active website menu */
+	.current-menu-item a,
+	.current_page_item a {
+		@apply text-secondary-color font-semibold bg-blue-50;
+	}
+
+	/* Mobile button */
+	.nav-menu a,
+	.nav-mobile a {
+		@apply block px-6 py-4 text-lg text-gray-700 hover:text-secondary-color hover:bg-gray-100 
+               font-medium transition-all rounded-2xl md:rounded-none;
+	}
+
+	.current-menu-item a {
+		@apply text-secondary-color font-semibold bg-blue-50;
+	}
+
+	#mobile-menu {
+		transition: transform 300ms ease-out;
+	}
+
+	#mobile-overlay {
+		transition: opacity 300ms ease-out;
+	}
+}

@@ -1,0 +1,21 @@
+# =============================================
+# .gitignore cool-blog-theme
+# =============================================
+
+# Dependencies
+node_modules/
+build/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# System files
+Thumbs.db

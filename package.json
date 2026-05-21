@@ -1,0 +1,23 @@
+{
+	"name": "piotr-blog-theme",
+	"version": "1.0.0",
+	"description": "Motyw WordPress - Cool Blog",
+	"scripts": {
+		"start": "concurrently \"npm run watch:css\" \"npm run watch:js\"",
+		"build": "npm run build:css && npm run build:js",
+		"build:css": "tailwindcss -i ./src/index.css -o ./build/index.css --minify",
+		"build:js": "esbuild src/index.js --bundle --outfile=build/index.js --minify",
+		"watch:css": "tailwindcss -i ./src/index.css -o ./build/index.css --watch",
+		"watch:js": "esbuild src/index.js --bundle --outfile=build/index.js --watch",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "Piotr Rucki",
+	"license": "ISC",
+	"devDependencies": {
+		"@tailwindcss/cli": "^4.3.0",
+		"concurrently": "^9.2.1",
+		"esbuild": "^0.28.0",
+		"tailwindcss": "^4.3.0"
+	}
+}
