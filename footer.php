@@ -40,7 +40,7 @@
             </div>
           </div>
 
-          <div class="site-footer__col-four  place-self-center">
+          <div class="site-footer__col-four  place-self-center w-3xs">
             <h3 class="headline headline--small text-center mt-6">Skontaktuj się z nami bądź zainspiruj naszymi projektami.</h3>
             <div class="mt-8 flex justify-center">
               <nav>
