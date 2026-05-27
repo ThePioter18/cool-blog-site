@@ -21,7 +21,7 @@
               <h3 class="headline headline--small mb-4 font-bold text-lg">Klikaj chętnie</h3>
               <nav class="nav-list">
                 <ul class="justify-items-center md:justify-items-start">
-                  <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('sample-page'))); ?>">Trochę o mnie</a></li>
+                  <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('about-me'))); ?>">Trochę o mnie</a></li>
                   <li><a href="#">Realizacje</a></li>
                   <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('contact'))); ?>">Kontakt</a></li>
                 </ul>
@@ -41,8 +41,9 @@
           </div>
 
           <div class="site-footer__col-four  place-self-center w-3xs">
-            <h3 class="headline headline--small text-center mt-6">Skontaktuj się z nami bądź zainspiruj naszymi projektami.</h3>
-            <div class="mt-8 flex justify-center">
+            <!-- <h3 class="headline headline--small text-center mt-6">Skontaktuj się z nami bądź zainspiruj naszymi projektami.</h3> -->
+            <h3 class="headline headline--small text-center mt-4">Skontaktuj się ze mną <span class="block">lub zainspiruj się wybranymi projektami.</span></h3>
+            <div class="flex justify-center mt-8 md:mt-4">
               <nav>
                 <ul class="social-icons-list grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-6">
                   <li>
