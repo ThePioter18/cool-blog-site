@@ -7,6 +7,16 @@ function cool_blog_load_assets() {
     
     $version = wp_get_theme()->get('Version'); // automatically downloads the version from style.css
 
+    // === TablerIcons ===
+    wp_enqueue_style(
+        'tabler-icons',
+        'https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css', 
+        array(),
+        null,
+        'all'
+    );
+
+
     // === CSS ===
     wp_enqueue_style(
         'cool-blog-css', 

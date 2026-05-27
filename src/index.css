@@ -47,4 +47,8 @@ html {
 	#mobile-overlay {
 		transition: opacity 300ms ease-out;
 	}
+
+	.nav-list li {
+		@apply mb-2 hover:text-secondary-color transition duration-300;
+	}
 }
