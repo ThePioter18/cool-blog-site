@@ -6,7 +6,7 @@
           <div class="site-footer__col-one place-self-center">
 
             <h1 class="blog-logo-text font-bold  hover:text-secondary-color transition duration-300 text-2xl mb-4 grid justify-items-center md:justify-items-start">
-              <a href="<?php echo home_url(); ?>">CoolBlog</a>
+              <a href="<?php echo esc_url( home_url() ); ?>">CoolBlog</a>
             </h1>
             <p class="hover:text-amber-400 transition duration-300">
               <a href="tel:343404922" class="site-footer__lin">
@@ -21,9 +21,12 @@
               <h3 class="headline headline--small mb-4 font-bold text-lg">Klikaj chętnie</h3>
               <nav class="nav-list">
                 <ul class="justify-items-center md:justify-items-start">
-                  <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('about-me'))); ?>">Trochę o mnie</a></li>
-                  <li><a href="#">Realizacje</a></li>
-                  <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('contact'))); ?>">Kontakt</a></li>
+                  <li <?php if (is_page('about-me')) echo 'class="current-menu-item"'; ?>
+                  ><a href="<?php echo esc_url(get_permalink(get_page_by_path('about-me'))); ?>">Trochę o mnie</a></li>
+                  <li <?php if (is_page('projects')) echo 'class="current-menu-item"'; ?>
+                  ><a href="<?php echo esc_url(get_permalink(get_page_by_path('projects'))); ?>">Realizacje</a></li>
+                  <li <?php if (is_page('contact')) echo 'class="current-menu-item"'; ?>
+                  ><a href="<?php echo esc_url(get_permalink(get_page_by_path('contact'))); ?>">Kontakt</a></li>
                 </ul>
               </nav>
             </div>
@@ -33,7 +36,8 @@
               <nav class="nav-list">
                 <ul class="justify-items-center md:justify-items-end">
                   <li><a href="#">Legal</a></li>
-                  <li><a href="#">Privacy</a></li>
+                  <li <?php if (is_page('privacy-policy')) echo 'class="current-menu-item"'; ?>
+                  ><a href="<?php echo esc_url(get_permalink(get_page_by_path('privacy-policy'))); ?>">Privacy</a></li>
                   <li><a href="#">Terms & Conditions</a></li>
                 </ul>
               </nav>
@@ -41,7 +45,6 @@
           </div>
 
           <div class="site-footer__col-four  place-self-center w-3xs">
-            <!-- <h3 class="headline headline--small text-center mt-6">Skontaktuj się z nami bądź zainspiruj naszymi projektami.</h3> -->
             <h3 class="headline headline--small text-center mt-4">Skontaktuj się ze mną <span class="block">lub zainspiruj się wybranymi projektami.</span></h3>
             <div class="flex justify-center mt-8 md:mt-4">
               <nav>

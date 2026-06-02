@@ -8,9 +8,9 @@ get_header(); ?>
     while(have_posts()) {
       the_post(); ?>
       
-      <div class="flex items-center pt-5 mb-10">
+      <div class="flex items-center pt-5 mb-6">
         <div class="w-24 rounded-xl overflow-hidden text-center shrink-0 bg-teal-500">
-          <div class="flex justify-around ">
+          <div class="flex justify-around">
             <span class="text-white block text-xl uppercase leading-8"><?php the_time('M'); ?></span>
             <span class="text-white block text-sm"><?php the_time('Y'); ?></span>
           </div>
@@ -22,8 +22,32 @@ get_header(); ?>
            <p class="text-xl text-gray-200">by <?php the_author_meta('display_name'); ?></p>
         </div>
       </div>
+
+      <div class="metabox pb-2 border-b border-gray-100">
+        <div class="flex items-center flex-wrap gap-3 text-sm">
+          
+          <!-- Link Blog Home -->
+          <a href="<?php echo site_url('/blog'); ?>" 
+              class="metabox__blog-home-link">
+                <i class="ti ti-home" aria-hidden="true"></i>
+                Blog Home
+          </a>
+
+          <!-- Meta info -->
+          <div class="text-gray-200">
+              <span class="mx-2">•</span>
+              Posted by <span class="author_post">
+                  <?php the_author_posts_link(); ?>
+              </span>  in
+              <span class="category_text hover:underline">
+                  <?php echo get_the_category_list(', '); ?>
+              </span>
+          </div>
+        </div>
+      </div>
+
       
-      <div class="prose max-w-full mb-10 text-gray-200">
+      <div class="prose max-w-full md:text-lg mt-5 mb-10 text-gray-200">
         <p><?php the_content(); ?></p>
       </div>
 
