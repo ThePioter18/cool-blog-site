@@ -46,14 +46,14 @@
         </div>
 
         <!-- Right side: space for your photo -->
-        <div class="w-full lg:w-125 aspect-4/3 sm:aspect-video lg:aspect-square relative group">
+        <div class="w-full max-w-md lg:max-w-none lg:w-125 aspect-4/3 sm:aspect-video lg:aspect-square relative group mx-auto">
             <div class="absolute inset-0 bg-linear-to-tr from-secondary-color/30 to-transparent rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
             
             <div class="w-full h-full relative rounded-2xl overflow-hidden border-2 border-white/10 group-hover:border-secondary-color/40 transition-colors duration-300 shadow-xl">
                 <img 
                     src="<?php echo get_theme_file_uri('img/contact-computer.jpg'); ?>" 
                     alt="Contact background" 
-                    class="w-full h-full object-cover grayscale-20 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                    class="aspect-4/3 sm:aspect-video lg:aspect-square object-cover object-center grayscale-20 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                 />
             </div>
         </div>
