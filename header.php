@@ -26,25 +26,25 @@
                 'theme_location' => 'primary',
                 'menu'           => 'blog-menu',
                 'container'      => false,
-                'menu_class'     => 'hidden md:flex items-center gap-x-8 nav-menu',
+                'menu_class'     => 'hidden lg:flex items-center gap-x-3 lg:gap-x-6 xl:gap-x-8 nav-menu',
                 'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                 'fallback_cb'    => false,
             ]); 
             ?>
             <!-- Hamburger Button -->
             <button id="mobile-menu-button" 
-                        class="md:hidden text-3xl text-gray-700 focus:outline-none z-50 transition-transform">
+                        class="lg:hidden text-3xl text-gray-700 focus:outline-none z-50 transition-transform">
                     ☰
                 </button>
           </div>
         </div>
 
             <!-- Overlay z Blur -->
-            <div id="mobile-overlay" class="hidden fixed inset-0 bg-black/50 backdrop-blur-md z-40 md:hidden transition-opacity duration-300"></div>
+            <div id="mobile-overlay" class="hidden fixed inset-0 bg-black/50 backdrop-blur-lg z-40 lg:hidden transition-opacity duration-300"></div>
 
             <div id="mobile-menu" class="fixed inset-x-0 top-0 bg-white shadow-2xl z-50 
             -translate-y-full transition-transform duration-300 ease-out overflow-y-auto
-            hidden md:hidden">
+            hidden lg:hidden">
 
                 <div class="max-w-7xl mx-auto px-6">
                   <!-- Top bar -->

@@ -150,3 +150,7 @@ async function getResultsData(term) {
 	const results = await resultsPromise.json();
 	return results;
 }
+
+// Add modules MyNotes.js
+import MyNotes from './modules/MyNotes.js';
+new MyNotes();
