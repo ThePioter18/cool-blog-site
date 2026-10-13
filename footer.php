@@ -38,7 +38,7 @@
                   <li><a href="#">Legal</a></li>
                   <li <?php if (is_page('privacy-policy')) echo 'class="current-menu-item"'; ?>
                   ><a href="<?php echo esc_url(get_permalink(get_page_by_path('privacy-policy'))); ?>">Privacy</a></li>
-                  <li><a href="#">Terms & Conditions</a></li>
+                  <li class="md:text-right"><a href="#">Terms & Conditions</a></li>
                 </ul>
               </nav>
             </div>
