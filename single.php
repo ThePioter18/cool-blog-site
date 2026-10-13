@@ -69,7 +69,11 @@ get_header(); ?>
 		      <!-- our LI or list item html can go here -->
 		      <li><a class="hover:text-teal-200 hover:underline" href="<?php the_permalink();?>"><?php the_title();?></a></li>
 
-	      <?php } ?> 
+	      <?php } 
+        
+          //reset the query
+        	wp_reset_postdata();
+        ?> 
 	      
       </ul>     
       
