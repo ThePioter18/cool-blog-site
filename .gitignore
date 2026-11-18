@@ -1,21 +1,25 @@
-# =============================================
-# .gitignore cool-blog-theme
-# =============================================
+# Ignore everything by default
+*
 
-# Dependencies
-node_modules/
-build/
+# Keep this file
+!.gitignore
 
-# Logs
-*.log
+# Allow custom theme
+!/themes/
+/themes/*
+!/themes/cool-blog-theme/
+!/themes/cool-blog-theme/**
 
-# Environment variables
-.env
+# Allow custom plugins
+!/plugins/
+!/plugins/first-unique-plugin/
+!/plugins/first-unique-plugin/**
+!/plugins/word-filter-plugin/
+!/plugins/word-filter-plugin/**
 
-# IDE
-.vscode/
-.idea/
-.DS_Store
+# Allow custom mu-plugins
+!/mu-plugins/
+!/mu-plugins/**
 
-# System files
-Thumbs.db
+# Ignore backup files
+**/*~
